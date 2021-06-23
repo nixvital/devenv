@@ -21,5 +21,6 @@ $ nix develop "github:nixvital/devenv#py-vanilla"
 
 1. [py-vanilla](envs/py-vanilla/default.nix): This is a very basic
    python development environment, with jupyter installed.
-   
-
+2. [ml-pytorch](envs/ml-pytorch/default.nix): This is a development
+   environment for machine learning projects based on pytorch. It also
+   provides useful utility libraries such as matplotlib.

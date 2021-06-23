@@ -18,6 +18,7 @@
     in {
       packages = {
         py-vanilla = pkgs.callPackage ./envs/py-vanilla {};
+        ml-pytorch = pkgs.callPackage ./envs/ml-pytorch {};
       };
     });
 }
