@@ -18,7 +18,11 @@
     in {
       packages = {
         py-vanilla = pkgs.callPackage ./envs/py-vanilla {};
-        ml-pytorch = pkgs.callPackage ./envs/ml-pytorch {};
+        ml-pytorch = pkgs.callPackage ./envs/ml-pytorch {
+          cudatoolkit = pkgs.cudatoolkit_11_2;
+          nccl = pkgs.nccl_cudatoolkit_11;
+          cudnn = pkgs.cudnn_cudatoolkit_11_2;
+        };
       };
     });
 }

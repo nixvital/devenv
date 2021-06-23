@@ -2,15 +2,15 @@
 # based on pytorch. It also provides useful utility libraries such as
 # matplotlib.
 
-{ mkShell, python3, magma, cudatoolkit }:
+{ mkShell, python3, magma, cudatoolkit, nccl, cudnn }:
 
 let customMagma =  magma.override {
-      cudatoolkit = cudatoolkit;
+      inherit cudatoolkit;
     };
 
     customPython = python3.withPackages (python-packages: with python-packages; let
       customPytorchWithCuda = pytorchWithCuda.override {
-        cudatoolkit = cudatoolkit;
+        inherit cudatoolkit nccl cudnn;
         magma = customMagma;
       };
       
