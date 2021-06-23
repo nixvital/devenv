@@ -1,6 +1,8 @@
 # devenv
 A collection of development environment for different projects.
 
+[![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
+
 This project aims to 
 
 1. Help you quickly spin up a development environment for hacking (as `devShells`).
