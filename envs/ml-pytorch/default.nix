@@ -29,7 +29,7 @@ let customMagma =  magma.override {
     pythonIcon = "f3e2";  # https://fontawesome.com/v5.15/icons/python?style=brands
 
 in mkShell rec {
-  name = "py-vanilla";
+  name = "ml";
 
   packages = [
     customPython
