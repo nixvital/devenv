@@ -18,6 +18,7 @@
     in {
       packages = {
         py-vanilla = pkgs.callPackage ./envs/py-vanilla {};
+        ml-basic = pkgs.callPackage ./envs/ml-basic {};
         ml-pytorch = pkgs.callPackage ./envs/ml-pytorch {
           cudatoolkit = pkgs.cudatoolkit_11_2;
           nccl = pkgs.nccl_cudatoolkit_11;
