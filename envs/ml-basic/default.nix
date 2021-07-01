@@ -6,6 +6,7 @@
 let customizedPython = python3.withPackages (python-packages: with python-packages; [
       jupyterlab ipywidgets ipydatawidgets numpy matplotlib
       pandas lightgbm plotly
+      pyarrow fastparquet
     ]);
 
     pythonIcon = "f3e2";  # https://fontawesome.com/v5.15/icons/python?style=brands
