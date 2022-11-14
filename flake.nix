@@ -2,7 +2,7 @@
   description = "A collection of development environment for different projects";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/21.05";
+    nixpkgs.url = "github:NixOS/nixpkgs";
 
     flake-utils.url = "github:numtide/flake-utils";
     flake-utils.inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +18,9 @@
     in {
       packages = {
         py-vanilla = pkgs.callPackage ./envs/py-vanilla {};
+        py-vanilla311 = pkgs.callPackage ./envs/py-vanilla {
+          pythonVersion = "311";
+        };        
         ml-basic = pkgs.callPackage ./envs/ml-basic {};
         ml-pytorch = pkgs.callPackage ./envs/ml-pytorch {
           cudatoolkit = pkgs.cudatoolkit_11_2;

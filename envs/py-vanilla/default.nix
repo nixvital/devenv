@@ -1,10 +1,13 @@
 # This is a very basic python development environment, with jupyter
 # lab installed.
 
-{ mkShell, python3, ... }:
+{ pkgs,
+  mkShell,
+  pythonVersion ? "310"
+}:
 
-let customizedPython = python3.withPackages (python-packages: with python-packages; [
-      jupyterlab ipywidgets ipydatawidgets numpy matplotlib
+let customizedPython = pkgs."python${pythonVersion}".withPackages (python-packages: with python-packages; [
+      jupyterlab numpy matplotlib
     ]);
 
     pythonIcon = "f3e2";  # https://fontawesome.com/v5.15/icons/python?style=brands
